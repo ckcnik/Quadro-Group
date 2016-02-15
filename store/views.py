@@ -9,7 +9,7 @@ class StandardResultsSetPagination(pagination.PageNumberPagination):
     max_page_size = 100
 
 
-class PopulationList(generics.ListCreateAPIView):
+class PopulationList(generics.ListAPIView):
     """
     API endpoint that represents a list of population cities.
     """
