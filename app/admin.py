@@ -1,5 +1,5 @@
 from django.contrib import admin
-from store.models import Population, Category, Item
+from .models import Population, Category, Item
 
 
 class PopulationAdmin(admin.ModelAdmin):

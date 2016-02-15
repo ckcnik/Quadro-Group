@@ -13,7 +13,6 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Category
         fields = ('id', 'name', 'description')
-        # read_only_fields = ('id', 'country', 'city', 'population', )
 
 
 class ItemSerializer(serializers.HyperlinkedModelSerializer):
