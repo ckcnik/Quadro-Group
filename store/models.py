@@ -14,3 +14,31 @@ class Population(models.Model):
 
     def __str__(self):
         return self.country
+
+
+@python_2_unicode_compatible
+class Category(models.Model):
+    """
+    Таблица категорий
+    """
+    name = models.CharField(max_length=100, verbose_name=_(u'Name'))
+    description = models.TextField(blank=True, verbose_name=_(u'Description'))
+
+    def __str__(self):
+        return self.name
+
+
+@python_2_unicode_compatible
+class Item(models.Model):
+    """
+    Таблица товаров
+    """
+    name = models.CharField(max_length=100, verbose_name=_(u'Name'))
+    categories = models.ManyToManyField(Category)
+    value_int = models.PositiveIntegerField(verbose_name=_(u'Number'))
+    value_float = models.FloatField(verbose_name=_(u'Cost'))
+
+    def __str__(self):
+        return self.name
+
+
